@@ -115,7 +115,12 @@ Then, we will simulate other two bids from Investor2 and Investor 3. It can be s
 
 ![Screenshot](imagesformd/inv2.png)
 
-Both from the issuer or investor side, the Market Ledger can be readed by entering a 3 in the options menu. The following image shows the output of the Market Ledger. It can be seen that, at the first moment, Sellers B and C have placed their sell - order. Then, Investor1 and 3 have placed their bid, and their money has been retained in their account. Due to the fact that bid of Investor3 has been rejected, his money has been returned. Then, Investor2 and 3 have placed their bids, and the money has been retained in their bank account  
+Both from the issuer or investor side, the Market Ledger can be readed by entering a 3 in the options menu. The following image shows the output of the Market Ledger. It can be seen that, at the first moment, Sellers B and C have placed their sell - order. Then, Investor1 and 3 have placed their bid, and their money has been retained in their account. Due to the fact that bid of Investor3 has been rejected, his money has been returned. Then, Investor2 and 3 have placed their bids, and the money has been retained in their bank account. Finally, as the invoice has been fully financed, the final bid has been recalculated, and the difference of money has been returned back. We can finally see the transaction details and profit for each of the investors.
 
 ![Screenshot](imagesformd/inv3.png)
+
+If we try to buy another invoice, we will see that the previous invoice has dissappeared from the invoice list, as it's state has been changed to closed=yes.
+
+![Screenshot](imagesformd/inv4.png)
+
 
