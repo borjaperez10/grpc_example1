@@ -9,9 +9,9 @@ This go program creates as a  gRPC server that listens in port 9000 and responds
 ### Issuer
 This go program is intended to emulate any issuer that wants to finance an invoice. The following image shows a block diagram of it. Marked with red colour, the used gRPC endpoints can be seen:
 At the first, a gRPC connection is created and this connection is checked by sending an empty message to the server. This is done through the CheckConnectivity() gRPC method. If the connection is correctly established, the user will be requsted to introduce an option. Using a switch case statement, the following possibilities are established:
-*Case 1 Register an Issuer:* A new issuer can be registered through the IntroduceIssuerToDatabase()gRPC method.
-*Case 2 Sell an Invoice:* if the issuer is already registered, an invoice can be sold using the SellInvoice() gRCP method.
-*Case 3 Read the Market Ledger:* the Market Ledger may be read through the ReadMarketLedger() gRPC method. 
+**Case 1 Register an Issuer:** A new issuer can be registered through the IntroduceIssuerToDatabase()gRPC method.
+**Case 2 Sell an Invoice:** if the issuer is already registered, an invoice can be sold using the SellInvoice() gRCP method.
+**Case 3 Read the Market Ledger:** the Market Ledger may be read through the ReadMarketLedger() gRPC method. 
 
 ![Screenshot](imagesformd/issuer.png)
 
@@ -19,9 +19,10 @@ At the first, a gRPC connection is created and this connection is checked by sen
 ### Investor
 This go program is intended to emulate any investor that wants to buy an invoice. The following image shows a block diagram of it. Marked with red colour, the used gRPC endpoints can be seen: 
 At the first, a gRPC connection is created and this connection is checked by sending an empty message to the server. This is done through the CheckConnectivity() gRPC method. If the connection is correctly established, the user will be requsted to introduce an option. Using a switch case statement, the following possibilities are established:
-*Case 1 Register an Issuer:* A new issuer can be registered through the IntroduceInvestorToDatabase()gRPC method.
-*Case 2 Buy an Invoice:* This must be executed only if the investor is already registered. The non-closed invoices will be read(through the GetAvailableInvoices() gRPC method). The investor will select one of the invoices, and the money will be retained in his bank account thanks to the TryToModifyInvestorMoney() gRPC method. Finally, the matching algorithm is applied in order to check if the bid is correct. This is executed in the TryToCreateInvoicePart() gRPC request.
-*Case 3 Read the Market Ledger:* the Market Ledger may be read through the ReadMarketLedger() gRPC method.
+
+**Case 1 Register an Issuer:** A new issuer can be registered through the IntroduceInvestorToDatabase()gRPC method.
+**Case 2 Buy an Invoice:** This must be executed only if the investor is already registered. The non-closed invoices will be read(through the GetAvailableInvoices() gRPC method). The investor will select one of the invoices, and the money will be retained in his bank account thanks to the TryToModifyInvestorMoney() gRPC method. Finally, the matching algorithm is applied in order to check if the bid is correct. This is executed in the TryToCreateInvoicePart() gRPC request.
+**Case 3 Read the Market Ledger:** the Market Ledger may be read through the ReadMarketLedger() gRPC method.
 
 ![Screenshot](imagesformd/investor.png)
 
