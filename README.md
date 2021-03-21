@@ -10,18 +10,15 @@ Git clone ad cd to the repository
 Run the application using docker-compose. The following command will build and run the four services used for this challenge: the grpc server, the issuer client, the investor client and the database:
 
 - `docker-compose up`
-- 
+
 ![Screenshot](imagesformd/compose_up.png)
 
 Then, the service will be started. To simulate an issuer or an investor, the following commands can be executed, which will start the issuer/investor client.
 
 - `docker-compose run issuer`
-
-![Screenshot](imagesformd/compose_run_issuer.png)   
-
 - `docker-compose run investor`
 
-![Screenshot](imagesformd/composer_run_investor.png)
+![Screenshot](imagesformd/compose_run_issuer.png)    ![Screenshot](imagesformd/compose_run_investor.png)
 
 
 ## Description of the system:
