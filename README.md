@@ -16,9 +16,12 @@ Run the application using docker-compose. The following command will build and r
 Then, the service will be started. To simulate an issuer or an investor, the following commands can be executed, which will start the issuer/investor client.
 
 - `docker-compose run issuer`
+
+![Screenshot](imagesformd/compose_run_issuer.png)   
+
 - `docker-compose run investor`
 
-![Screenshot](imagesformd/compose_run_issuer.png)   ![Screenshot](imagesformd/composer_run_investor.png)
+![Screenshot](imagesformd/composer_run_investor.png)
 
 
 ## Description of the system:
