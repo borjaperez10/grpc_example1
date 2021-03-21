@@ -51,6 +51,7 @@ As described in the previous section, the system uses gRPC in order to perform t
 Checking connectivity with the server: This endpoint is the most simple one: it sends an empty proto body request (and also receives an empty message). If the answer is received means that the server is responding, and so on, the connectivity is established. This kind of messages are executed both in the investor and issuer side. 
  
 Reading market ledger: This endpoint is the one that reads the market ledger that is being generated in the server side. Each time an important action is performed, a new line is appended to the Market Ledger. Both the issuer and the investor can check this ledger by clicking the option number 3 in the switch-case statement. An empty proto request will be send to the server and the answer will contain a string, with all the lines that are registered in the market ledger.  
+![Screenshot](imagesformd/screenshot.png)
  
 Introducing Issuers to database: This endpoint is used to register a new issuer into the database, so, this request is only possible to be made from the issuer part. In the proto request, the nif and name of the issuer must be introduced. For the proto response, we will receive a single string. 
  
