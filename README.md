@@ -1,6 +1,8 @@
 
 
-#Description of the system:
+# Description of the system:
+
+
 The system is composed of four main services that may be started  using a docker-compose. This section describes briefly how they work.
 Server:
 This go program creates as a  gRPC server that listens in port 9000 and responds to requests that are made from issuer ad investor clients. It also deals with the PostgreSQL database, introducing or updating values.  
