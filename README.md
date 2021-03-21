@@ -99,4 +99,23 @@ At this point, the invoice will be set to closed, and finally, the payment will 
 
 ## Example of the system
 
+Once the server is running (docker-compose up command will run it), we can execute both the issuer or investor. For this example, we will create three issuers and three investors:
+
+![Screenshot](imagesformd/register.png)
+
+Now, SellerB and SellerC are going to put an invoice to sell. In this case, SellerB will sell an invoice Invoice-1 of $1200, and will request for $1100. SellerC will sell an invoice Invoice1 of $1000 and will request $900.
+
+![Screenshot](imagesformd/sellinv.png)
+
+Now, we will simulate that Investor1 makes a bid to the first invoice of $900, with amount $850. We will simulate that Investor2 makes a bid, also for first invoice of $200, with amount $180. First bid is introduced, but second one is rejected, due to the bid difference (seller was asking for $1100 from $1200 invoice, which has higher discount than the bid $180/$200). 
+
+![Screenshot](imagesformd/inv1.png)
+
+Then, we will simulate other two bids from Investor2 and Investor 3. It can be seen that finally, the bid is fully financed:
+
+![Screenshot](imagesformd/inv2.png)
+
+Both from the issuer or investor side, the Market Ledger can be readed by entering a 3 in the options menu. The following image shows the output of the Market Ledger. It can be seen that, at the first moment, Sellers B and C have placed their sell - order. Then, Investor1 and 3 have placed their bid, and their money has been retained in their account. Due to the fact that bid of Investor3 has been rejected, his money has been returned. Then, Investor2 and 3 have placed their bids, and the money has been retained in their bank account  
+
+![Screenshot](imagesformd/inv3.png)
 
