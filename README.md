@@ -3,6 +3,7 @@
 ## How to run the application
 
 Git clone ad cd to the repository
+
 -. git clone https://github.com/borjaperez10/tech_challenge.git
 -. cd tech_challenge
 
