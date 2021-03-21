@@ -18,7 +18,8 @@ Then, the service will be started. To simulate an issuer or an investor, the fol
 - `docker-compose run issuer`
 - `docker-compose run investor`
 
-![Screenshot](imagesformd/compose_up_issuer.png)  ![Screenshot](imagesformd/composer_up_investor.png)
+![Screenshot](imagesformd/compose_up_issuer.png)
+![Screenshot](imagesformd/composer_up_investor.png)
 
 
 ## Description of the system:
