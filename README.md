@@ -4,8 +4,8 @@
 
 Git clone ad cd to the repository
 
-- git clone https://github.com/borjaperez10/tech_challenge.git
-- cd tech_challenge
+- 'git clone https://github.com/borjaperez10/tech_challenge.git'
+- 'cd tech_challenge'
 
 
 
