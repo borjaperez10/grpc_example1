@@ -62,7 +62,8 @@ As described in the previous section, the system uses gRPC in order to perform t
  ![Screenshot](imagesformd/introInvestor.png)
  
 **Selling invoices:** This endpoint is used by a registered issuer to make an invoice sell request. The Id must not be specified, as its auto-incrementing in the database. From the request, the companyId (issuer ID, in this case the NIF), a name for the invoice, the price of the invoice, and the amount of money that wants to receive must be specified. Finally, the closed file will be set to “No”  by default, as the invoices are not set to  closed until there are buyed. The response proto request will contain a single string.
- 
+  ![Screenshot](imagesformd/sellInvoice.png)
+
 **Modifying investor’s bank account:** This endpoint is used to modify the bank account of the investors: once an investor places a bid, the amount of money of the bid will be changed to “retained” state. So, the info required for the proto request is the bid information: the dni of the investor who places the bid, the total money of the bid, the amount of money that will use to buy the bid, and a string named action, which is established in this case as “rm” indicating remove action. 
 ![Screenshot](imagesformd/modifyAccount.png)
 
