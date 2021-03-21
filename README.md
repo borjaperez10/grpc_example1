@@ -10,11 +10,15 @@ Git clone ad cd to the repository
 Run the application using docker-compose. The following command will build and run the four services used for this challenge: the grpc server, the issuer client, the investor client and the database:
 
 - `docker-compose up`
+- 
+![Screenshot](imagesformd/compose_up.png)
 
 Then, the service will be started. To simulate an issuer or an investor, the following commands can be executed, which will start the issuer/investor client.
 
 - `docker-compose run issuer`
 - `docker-compose run investor`
+
+![Screenshot](imagesformd/compose_up_issuer.png)  ![Screenshot](imagesformd/composer_up_investor.png)
 
 
 ## Description of the system:
@@ -91,4 +95,8 @@ At this point, the invoice will be set to closed, and finally, the payment will 
 **Getting all the available invoices:** This endpoint sends an Empty request proto message, and returns a stream of Invoices: all the available invoices will be returned as proto messages, including the folowing body of the request:
 
 ![Screenshot](imagesformd/getInvoices.png)
+
+
+## Example of the system
+
 
