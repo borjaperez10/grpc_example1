@@ -1,12 +1,12 @@
 
 
-# Description of the system:
+## Description of the system:
 
 
 The system is composed of four main services that may be started  using a docker-compose. This section describes briefly how they work.
-Server:
+### Server:
 This go program creates as a  gRPC server that listens in port 9000 and responds to requests that are made from issuer ad investor clients. It also deals with the PostgreSQL database, introducing or updating values.  
-Issuer
+### Issuer
 This go program is intended to emulate any issuer that wants to finance an invoice. The following image shows a block diagram of it. Marked with red colour, the used gRPC endpoints can be seen:
 At the first, a gRPC connection is created and this connection is checked by sending an empty message to the server. This is done through the CheckConnectivity() gRPC method. If the connection is correctly established, the user will be requsted to introduce an option. Using a switch case statement, the following possibilities are established:
 •	Case 1 Register an Issuer: A new issuer can be registered through the IntroduceIssuerToDatabase()gRPC method.
@@ -18,7 +18,7 @@ At the first, a gRPC connection is created and this connection is checked by sen
 
 
 
-##Investor
+### Investor
 This go program is intended to emulate any investor that wants to buy an invoice. The following image shows a block diagram of it. Marked with red colour, the used gRPC endpoints can be seen: 
 At the first, a gRPC connection is created and this connection is checked by sending an empty message to the server. This is done through the CheckConnectivity() gRPC method. If the connection is correctly established, the user will be requsted to introduce an option. Using a switch case statement, the following possibilities are established:
 •	Case 1 Register an Issuer: A new issuer can be registered through the IntroduceInvestorToDatabase()gRPC method.
@@ -28,7 +28,7 @@ At the first, a gRPC connection is created and this connection is checked by sen
 
 
 
-PostgreSQL database
+### PostgreSQL database
 The system uses a database to introduce the data. When the docker-compose starts, the sql commands to create the database are executed. These values are persistent inside the docker-container until is removed. The following image shows the ER diagram of this database: 
  
 
@@ -45,7 +45,7 @@ The system uses a database to introduce the data. When the docker-compose starts
 
 
 
-gRPC endpoint functionalities
+## gRPC endpoint functionalities
 
 As described in the previous section, the system uses gRPC in order to perform the client-server communication (both investor and issuer side). Here these endpoints are described. For more information about them, the communication.proto file can be checked. 
 Checking connectivity with the server: This endpoint is the most simple one: it sends an empty proto body request (and also receives an empty message). If the answer is received means that the server is responding, and so on, the connectivity is established. This kind of messages are executed both in the investor and issuer side. 
